@@ -74,6 +74,5 @@ api.interceptors.response.use(response => {
     }
   }
 
-
   return  Promise.reject(error)
 })
