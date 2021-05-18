@@ -45,6 +45,7 @@ export function AuthProvider({ children } : AuthProviderProps) {
       api.get('/me')
       .then(response => {
         const { email, permissions, roles} = response.data;
+        console.log(permissions)
 
         setUser({ email, permissions, roles })
       })
@@ -84,7 +85,6 @@ export function AuthProvider({ children } : AuthProviderProps) {
 
       Router.push('/dashboard')
     } catch (error) {
-      console.log(error)
     }
   }
 
